@@ -1,0 +1,54 @@
+/* Estilo global del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente de texto como Arial o sans-serif si Arial no está disponible */
+    display: flex; /* Utiliza Flexbox para alinear los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del cuerpo */
+    align-items: center; /* Centra verticalmente los elementos dentro del cuerpo */
+    height: 100vh; /* Hace que el cuerpo ocupe el 100% de la altura de la ventana */
+    margin: 0; /* Elimina los márgenes por defecto del cuerpo */
+    background-color: #f4f4f9; /* Establece un color de fondo claro para el cuerpo */
+}
+
+/* Contenedor del campo de búsqueda */
+.search-container {
+    position: relative; /* Posiciona el contenedor relativo a sus elementos hijos */
+    width: 300px; /* Define un ancho fijo para el contenedor */
+}
+
+/* Campo de entrada del buscador */
+#search {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Añade espacio interno de 10px en todos los lados */
+    border: 1px solid #ccc; /* Añade un borde de 1px de color gris claro */
+    border-radius: 4px; /* Redondea las esquinas del campo con un radio de 4px */
+    font-size: 16px; /* Define el tamaño de la fuente del texto a 16px */
+}
+
+/* Lista de sugerencias */
+.suggestions {
+    position: absolute; /* Posiciona la lista de sugerencias en relación al contenedor padre */
+    top: 100%; /* Coloca la lista justo debajo del campo de entrada */
+    left: 0; /* Alinea el lado izquierdo de la lista con el contenedor padre */
+    right: 0; /* Alinea el lado derecho de la lista con el contenedor padre */
+    background: white; /* Establece el fondo de la lista de sugerencias en blanco */
+    border: 1px solid #ccc; /* Añade un borde de 1px de color gris claro */
+    border-top: none; /* Elimina el borde superior para conectarlo con el campo de entrada */
+    border-radius: 0 0 4px 4px; /* Redondea solo las esquinas inferiores del contenedor */
+    list-style: none; /* Elimina los marcadores de la lista */
+    padding: 0; /* Elimina el relleno interno de la lista */
+    margin: 0; /* Elimina los márgenes externos de la lista */
+    max-height: 150px; /* Limita la altura máxima de la lista a 150px */
+    overflow-y: auto; /* Permite el desplazamiento vertical si el contenido excede la altura máxima */
+    z-index: 10; /* Asegura que la lista de sugerencias aparezca sobre otros elementos */
+}
+
+/* Estilo de los elementos de la lista de sugerencias */
+.suggestions li {
+    padding: 10px; /* Añade un espacio interno de 10px a cada elemento */
+    cursor: pointer; /* Cambia el cursor a una mano al pasar sobre los elementos */
+}
+
+/* Estilo al pasar el mouse por encima de un elemento de la lista */
+.suggestions li:hover {
+    background-color: #f0f0f0; /* Cambia el fondo del elemento a un gris claro */
+}
